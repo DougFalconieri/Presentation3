@@ -31,3 +31,21 @@
     * This is one difference with Angular.js which is self-contained and has no dependencies.
 * If you are using `npm`, the package management tool that ships with the node.js server-side JavaScript platform, you can use it to install a tool called `ember-cgi` that can generate project templates automatically.
 
+##Creating an Application
+
+* In this presentation, I plan to cover various aspects of the Ember.js framework by using to build a sample app.
+    * I always finding that creating a somewhat realistic application is the best way to learn a new technology.
+* The application code will be included in the `src` folder in the presentation directory.
+    * I will link to relevant files as I discuss them.
+* The application itself will also be hosted on github.
+
+##Getting Started
+
+* Since we are building a single-page web app we will start with a single HTML page.
+    * We will call it `app.html` and you can look at the final version [here](src/app.html).
+* In the head section of the page, we will import the JavaScript files for jQuery, Handlebars and Ember.
+    * Ember must be imported after the other two libraries.
+* We will also include our own JavaScript file for our app-specific code.
+    * We'll call it app.js and you can view it [here](src/app.js).
+* An Ember.js application is created using the `create` method.
+    * `var myApp = Ember.application.create();`
