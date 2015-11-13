@@ -1,5 +1,6 @@
 var tasks = [
     {
+        id: 1,
         name: "Design Data Model",
         description: "Define database schema for application",
         assignedTo: "Anne",
@@ -7,6 +8,7 @@ var tasks = [
         points: 3
     },
     {
+        id: 2,
         name: "Load Sample Data",
         description: "Add sample data to database for development and testing purposes",
         assignedTo: "Bob",
@@ -14,6 +16,7 @@ var tasks = [
         points: 1
     },
     {
+        id: 3,
         name: "Build Web Services",
         description: "Build backend web services that the application will require",
         assignedTo: "Christine",
@@ -21,6 +24,7 @@ var tasks = [
         points: 3
     },
     {
+        id: 4,
         name: "Build Front-end Application",
         description: "Develop single-page application front-end using Ember.js",
         assignedTo: "Doug",
@@ -31,9 +35,18 @@ var tasks = [
 
 var App = Ember.Application.create();
 
+App.Router.map(function() {
+  this.resource('task', { path: '/task/:task_id' });
+});
+
 App.IndexRoute = Ember.Route.extend({
   model: function() {
-    alert(tasks.length);
-    return tasks[0];
+    return tasks;
+  }
+});
+
+App.TaskRoute = Ember.Route.extend({
+  model: function(params) {
+    return tasks[params.task_id - 1];
   }
 });

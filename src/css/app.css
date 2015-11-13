@@ -1,0 +1,40 @@
+h1 {
+    color: #c8f7ff;
+}
+
+h1 span {
+    color: #ddd;
+}
+
+body {
+    background-color: #725e7d;
+}
+
+#main-content {
+    margin-top: 100px;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #555;
+}
+
+.badge {
+    background-color: #5300a3;
+    margin-left: 5px;
+}
+
+.separated {
+    margin-top: 10px;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+    color: #c8f7ff;
+    height: 50px;
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+a.list-group-item:hover {
+    background-color: #e6fbff;
+}
