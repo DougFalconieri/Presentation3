@@ -35,7 +35,7 @@
 
 * In this presentation, I plan to cover various aspects of the Ember.js framework by using to build a sample app.
     * I always finding that creating a somewhat realistic application is the best way to learn a new technology.
-* The application will be (the start of) an Agile-planning that tracks tasks.
+* The application will be (the start of) an Agile-planning tool that tracks tasks.
 * The application code is included in the `src` folder in the presentation directory.
 * The application itself is hosted [here](http://dougfalconieri.github.io/Presentation3).
 
