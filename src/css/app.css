@@ -15,11 +15,17 @@ body {
     background-color: #ddd;
     border-radius: 5px;
     box-shadow: 5px 5px 10px #555;
+    padding: 20px;
 }
 
 .badge {
     background-color: #5300a3;
     margin-left: 5px;
+}
+
+.button-row {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .separated {
@@ -37,4 +43,12 @@ footer {
 
 a.list-group-item:hover {
     background-color: #e6fbff;
+}
+
+.btn-primary {
+    background: #5300a3;
+}
+
+ .btn-primary:hover, .btn-primary:focus {
+    background: #39006f;
 }

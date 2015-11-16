@@ -35,7 +35,12 @@
                                 <p class="list-group-item-text">{{task.description}}</p>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <strong>Assigned To:</strong> {{task.assignedTo}}
+                                        <strong>Assigned To:</strong> 
+                                        {{#if task.assignedTo}}
+                                            {{task.assignedTo}}
+                                        {{else}}
+                                            Unassigned
+                                        {{/if}}
                                     </div>
                                     <div class="col-sm-3">
                                         <strong>Status:</strong> {{task.status}}
@@ -49,8 +54,34 @@
         </script>
         
         <script type="text/x-handlebars" id="task">
-            <h2>Task #{{model.id}}</h2>
+            <h2>task #{{model.id}}</h2>
+            
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                {{input type="text" value=model.name class="form-control" id="nameInput"}}
+            </div>
+            <div class="form-group">
+                <label for="descriptionTextArea">Description</label>
+                {{textarea value=model.description class="form-control" rows="6"}}
+            </div>
+            <div class="form-group">
+                <label for="pointsInput">Points</label>
+                {{input type="text" value=model.points class="form-control" id="pointsInput"}}
+            </div>
+            <div class="form-group">
+                <label for="assigneeInput">Assignee</label>
+                {{input type="text" value=model.assignedTo class="form-control" id="assigneeInput"}}
+            </div>
+            <div class="form-group">
+                <label for="statusInput">Status</label>
+                {{input type="text" value=model.status class="form-control" id="statusInput"}}
+            </div>
+            <div class="button-row">
+                <button class="btn btn-primary" {{action "back"}}>Back to Task List</button>
+                <button class="btn btn-primary" {{action "deleteTask"}}>Delete Task</button>
+            </div>
         </script>
+        
     </head>
     <body>
         

@@ -27,13 +27,20 @@ var tasks = [
         id: 4,
         name: "Build Front-end Application",
         description: "Develop single-page application front-end using Ember.js",
-        assignedTo: "Doug",
         status: "Not started",
         points: 3
     }
 ];
 
+function findTaskIndex(id) {
+    for (var i = 0; i < tasks.length; i++) {
+        if (tasks[i].id == id)
+            return i;
+    }
+}
+
 var App = Ember.Application.create();
+
 
 App.Router.map(function() {
   this.resource('task', { path: '/task/:task_id' });
@@ -47,6 +54,20 @@ App.IndexRoute = Ember.Route.extend({
 
 App.TaskRoute = Ember.Route.extend({
   model: function(params) {
-    return tasks[params.task_id - 1];
+    return tasks[findTaskIndex(params.task_id)];
+  }
+});
+
+App.TaskController = Ember.Controller.extend({
+  actions: {
+    deleteTask() {
+      var index = findTaskIndex(this.get("model").id);
+      tasks.splice(index, 1);
+      this.transitionToRoute('index');
+    },
+    
+    back() {
+        this.transitionToRoute('index');
+    }
   }
 });
