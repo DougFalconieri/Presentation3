@@ -35,9 +35,9 @@
 
 * In this presentation, I plan to cover various aspects of the Ember.js framework by using to build a sample app.
     * I always finding that creating a somewhat realistic application is the best way to learn a new technology.
-* The application code will be included in the `src` folder in the presentation directory.
-    * I will link to relevant files as I discuss them.
-* The application itself will also be hosted on github.
+* The application will be (the start of) an Agile-planning that tracks tasks.
+* The application code is included in the `src` folder in the presentation directory.
+* The application itself is hosted [here](http://dougfalconieri.github.io/Presentation3).
 
 ##Getting Started
 
@@ -146,13 +146,13 @@
 
 ## Digression: Bootstrap
 
-    * Our home page is working well, but it looks pretty ugly with unstyled HTML.
-    * This can be easily fixed by using one of my favorite web development tools, Twitter's Bootstrap library.
-    * Bootstrap gives attractive styling for almost every element you would want in your web page.
-    * Also, apps designed with Bootstrap are responsive -- they automatically adjust themselves to screen size so the app looks good even on a tablet or smart phone.
-    * Since Bootstrap styling is done with simple CSS classes, you can easily add your own CSS file to tweak any aspect of the default styles that you don't like.
-    * For me this framework really hits the sweet spot between having lots of functionality out of the box and still having the flexibility to customize the functionality.
-    * With some Bootstrap styling, our site looks much better with a snazzy black and purple color scheme.
+* Our home page is working well, but it looks pretty ugly with unstyled HTML.
+* This can be easily fixed by using one of my favorite web development tools, Twitter's Bootstrap library.
+* Bootstrap gives attractive styling for almost every element you would want in your web page.
+* Also, apps designed with Bootstrap are responsive -- they automatically adjust themselves to screen size so the app looks good even on a tablet or smart phone.
+* Since Bootstrap styling is done with simple CSS classes, you can easily add your own CSS file to tweak any aspect of the default styles that you don't like.
+* For me this framework really hits the sweet spot between having lots of functionality out of the box and still having the flexibility to customize the functionality.
+* With some Bootstrap styling, our site looks much better with a snazzy black and purple color scheme.
     
 ## Creating a Second Screen
 
